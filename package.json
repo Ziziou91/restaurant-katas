@@ -1,0 +1,23 @@
+{
+  "name": "retaurant-katas",
+  "version": "1.0.0",
+  "description": "katas to help people new to coding",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ziziou91/restaurant-katas.git"
+  },
+  "author": "Josh Gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ziziou91/restaurant-katas/issues"
+  },
+  "homepage": "https://github.com/Ziziou91/restaurant-katas#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
