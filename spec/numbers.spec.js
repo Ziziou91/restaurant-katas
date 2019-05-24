@@ -2,6 +2,33 @@ const { expect } = require('chai');
 const numbers = require('../library/numbers');
 
 describe('numbers', () => {
+  describe('makePositive', () => {
+    const makePositivePR = total => {
+      return total < 0 ? -total : total;
+    };
+    it('returns a positvie number when given a positive total', () => {
+      expect(numbers.makePositive(10)).to.equal(10);
+      expect(numbers.makePositive(22.52)).to.equal(22.52);
+      expect(numbers.makePositive(1)).to.equal(1);
+      expect(numbers.makePositive(0)).to.equal(0);
+    });
+    it('returns a postive number when given a negative total', () => {
+      expect(numbers.makePositive(-10)).to.equal(10);
+      expect(numbers.makePositive(-22.52)).to.equal(22.52);
+      expect(numbers.makePositive(-55)).to.equal(55);
+      expect(numbers.makePositive(-1)).to.equal(1);
+      expect(numbers.makePositive(-0)).to.equal(0);
+    });
+    it('works for random numbers', () => {
+      for (let i = 0; i <= 100; i++) {
+        const randTotal = i % 2 ? -Math.random() * 100 : Math.random() * 100;
+        expect(numbers.makePositive(randTotal)).to.equal(
+          makePositivePR(randTotal)
+        );
+      }
+    });
+  });
+
   describe('calculateChange', () => {
     const calculateChangePR = (cash, bill) => {
       return cash - bill ? cash - bill : 'no change required';

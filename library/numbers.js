@@ -1,4 +1,15 @@
 module.exports = {
+  makePositive: total => {
+    /* It's an hour before close and the restauraunt is quiet. The front of house has 
+    asked you write up each sale.
+
+    Unfortunately, some of the other staff have bad handwriting, and the scanner will think 
+    the total has a '-' in front of it, making it negative.
+
+    write a makePositive fuction that returns a positive total.
+    */
+    return Math.sqrt(total * total);
+  },
   calculateChange: (cash, bill) => {
     /* Your table has finished their meal, you've given them the bill
           and they have put their money on the table. Work out what change you need to 
@@ -24,7 +35,7 @@ module.exports = {
   },
   addServiceCharge: price => {
     /* 
-        It's your first day on the job and the till isn't working, oh no!
+        It's Friday night and the till isn't working, oh no!
 
         Given to price of a meal, you need add the restaurants service charge, which
         is 15%, and return the total.
