@@ -1,12 +1,12 @@
-module.exports = {
-  createRandomString: len => {
-    let result = '';
-    const characters =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    for (let i = 0; i < len; i++) {
-      result += characters[Math.floor(Math.random() * charactersLength)];
-    }
-    return result;
-  }
+const createRandomItemGenerator = (items) => {
+  return () => {
+    const randomIndex = Math.floor(Math.random() * items.length);
+    return items[randomIndex];
+  };
 };
+
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+const createRandomLetter = createRandomItemGenerator(characters.split(''));
+
+exports.createRandomString = (length, charGenerator) => Array.from({ length }, charGenerator);

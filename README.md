@@ -36,7 +36,7 @@ Ideas for katas are, but not limited to:
 
 ### Strings
 
-- Contcatenation
+- Concatenation
 - number toString()
 - String methods, includes, indexOf, split
 - looping over a string
