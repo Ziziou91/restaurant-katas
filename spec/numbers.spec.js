@@ -6,7 +6,7 @@ describe('numbers', () => {
     const makePositivePR = total => {
       return total < 0 ? -total : total;
     };
-    it('returns a positvie number when given a positive total', () => {
+    it('returns a positive number when given a positive total', () => {
       expect(numbers.makePositive(10)).to.equal(10);
       expect(numbers.makePositive(22.52)).to.equal(22.52);
       expect(numbers.makePositive(1)).to.equal(1);
